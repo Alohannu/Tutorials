@@ -28,11 +28,11 @@ const App = () => {
       id: 'route',
       type: 'line',
       source: {
-        type: 'geojson',
+        type: 'geoJson',
         data: geoJson
       },
       paint: {
-        'line-color': '#4a90e2',
+        'line-color': 'red',
         'line-width': 6
       }
     })
@@ -146,8 +146,7 @@ const App = () => {
   }, [longitude, latitude])
 
   return (
-    <>
-    {map && (
+    <>{map && (
     <div className="app">
       <div ref={mapElement} className="map"></div>
       <div className="search-bar">
